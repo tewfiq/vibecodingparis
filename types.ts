@@ -82,11 +82,6 @@ export interface UiTranslation {
       legal: string;
     };
   };
-  notification: {
-    user: string;
-    action: string;
-    time: string;
-  };
   about: {
     back: string;
     role: string;
@@ -101,5 +96,10 @@ export interface UiTranslation {
     text: string;
     accept: string;
     decline: string;
+  };
+  notification: {
+    user: string;
+    action: string;
+    time: string;
   };
 }

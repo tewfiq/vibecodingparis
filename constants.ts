@@ -225,11 +225,6 @@ export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
         legal: "Mentions Légales",
       }
     },
-    notification: {
-      user: "Yanis de Marseille",
-      action: "vient de consulter la Masterclass",
-      time: "2m"
-    },
     about: {
       back: "Retour à l'accueil",
       role: "Fondateur & Formateur Principal",
@@ -244,6 +239,11 @@ export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
       text: "Ce site utilise des cookies pour fonctionner. Rien de personnel.",
       accept: "Accepter",
       decline: "Refuser"
+    },
+    notification: {
+      user: "Nouvel inscrit",
+      action: "vient de réserver sa place",
+      time: "à l'instant"
     }
   },
   en: {
@@ -294,11 +294,6 @@ export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
         legal: "Legal",
       }
     },
-    notification: {
-      user: "Yanis from Marseille",
-      action: "just viewed the Masterclass",
-      time: "2m"
-    },
     about: {
       back: "Back to home",
       role: "Founder & Lead Instructor",
@@ -313,6 +308,11 @@ export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
       text: "This site uses cookies to function. Nothing personal.",
       accept: "Accept",
       decline: "Decline"
+    },
+    notification: {
+      user: "New attendee",
+      action: "just booked a spot",
+      time: "just now"
     }
   }
 };

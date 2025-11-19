@@ -8,7 +8,6 @@ import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
 import Changelog from './components/Changelog';
 import Footer from './components/Footer';
-import Notification from './components/Notification';
 import About from './components/About';
 import CookieConsent from './components/CookieConsent';
 import SEO from './components/SEO';
@@ -103,7 +102,6 @@ function App() {
         <Footer language={language} onNavigate={handleNavigate} />
         
         <CookieConsent language={language} />
-        {currentView === 'home' && <Notification language={language} />}
       </div>
     </>
   );
