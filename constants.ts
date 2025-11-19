@@ -2,6 +2,9 @@
 import { NavItem, PricingTier, FaqItem, Commit, Feature, UiTranslation } from './types';
 import { Code, Zap, Box, Globe } from 'lucide-react';
 
+export const BOOKING_URL = "https://cal.com/tewfiqferahi/15min";
+export const GITHUB_REPO = "tewfiq/vibecodingparis"; // Change this to your actual public repo name
+
 export const NAV_ITEMS: Record<'fr' | 'en', NavItem[]> = {
   fr: [
     { label: 'Programme', href: '#programme' },
@@ -31,7 +34,8 @@ export const PRICING_TIERS: Record<'fr' | 'en', PricingTier[]> = {
         'Communauté Discord privée'
       ],
       highlight: true,
-      cta: "Je m'inscris — 149 €"
+      cta: "Je m'inscris — 149 €",
+      link: "https://buy.stripe.com/bJe8wQ3dN7NGc5EcJv7EQ0b"
     },
     {
       name: 'Standard',
@@ -45,7 +49,8 @@ export const PRICING_TIERS: Record<'fr' | 'en', PricingTier[]> = {
         'Facture déductible (Frais pro)'
       ],
       highlight: false,
-      cta: "Réserver — 299 €"
+      cta: "Réserver — 299 €",
+      link: "https://buy.stripe.com/bJe5kEdSrgkcfhQaBn7EQ0c"
     }
   ],
   en: [
@@ -61,7 +66,8 @@ export const PRICING_TIERS: Record<'fr' | 'en', PricingTier[]> = {
         'Private Discord community'
       ],
       highlight: true,
-      cta: "Sign up — €149"
+      cta: "Sign up — €149",
+      link: "https://buy.stripe.com/bJe8wQ3dN7NGc5EcJv7EQ0b"
     },
     {
       name: 'Standard',
@@ -75,7 +81,8 @@ export const PRICING_TIERS: Record<'fr' | 'en', PricingTier[]> = {
         'Deductible invoice (Pro expense)'
       ],
       highlight: false,
-      cta: "Book now — €299"
+      cta: "Book now — €299",
+      link: "https://buy.stripe.com/bJe5kEdSrgkcfhQaBn7EQ0c"
     }
   ]
 };
@@ -119,6 +126,7 @@ export const FAQS: Record<'fr' | 'en', FaqItem[]> = {
   ]
 };
 
+// Fallback data if GitHub API limit is reached
 export const RECENT_COMMITS: Commit[] = [
   { message: "feat: update landing page for December 2025", date: "16 nov 2025", author: "Tewfiq", hash: "7a2b9c" },
   { message: "fix: mobile responsiveness for pricing grid", date: "15 nov 2025", author: "Tewfiq", hash: "8c3d1e" },
@@ -184,7 +192,7 @@ export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
       bentoAdvantageTitle: "L'avantage injuste.",
       bentoAdvantageDesc: "Pendant que d'autres apprennent la syntaxe Python, vous apprenez à orchestrer l'IA.\nC'est la compétence la plus levier de la décennie.",
       bentoLangTitle: "En Français",
-      bentoLangDesc: "Ne traduisez plus vos idées.\n\"Crée-moi une landing page minimaliste\".\nC'est la seule syntaxe que vous devez maîtriser.\nL'IA comprend le français, le contexte et vos intentions.\nLa barrière de la langue technique est brisée.",
+      bentoLangDesc: "En Français\n\"Crée une app de to-do list\".\nC'est tout ce que vous avez à dire.\nLa barrière de la langue n'existe plus.",
       cardDesign: "Design System",
       cardDesignDesc: "Inclus automatiquement.",
       cardDeploy: "Déploiement",
@@ -253,7 +261,7 @@ export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
       bentoAdvantageTitle: "The unfair advantage.",
       bentoAdvantageDesc: "While others learn Python syntax, you learn to orchestrate AI.\nIt's the highest leverage skill of the decade.",
       bentoLangTitle: "Natural Language",
-      bentoLangDesc: "Stop translating your ideas.\n\"Create a minimalist landing page\".\nThis is the only syntax you need to master.\nAI understands natural language, context, and intent.\nThe technical language barrier is broken.",
+      bentoLangDesc: "In English\n\"Create a to-do list app\".\nThat's all you have to say.\nThe language barrier is gone.",
       cardDesign: "Design System",
       cardDesignDesc: "Included automatically.",
       cardDeploy: "Deployment",

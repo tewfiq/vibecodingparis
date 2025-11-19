@@ -13,6 +13,7 @@ export interface PricingTier {
   features: string[];
   highlight?: boolean;
   cta: string;
+  link: string;
 }
 
 export interface FaqItem {

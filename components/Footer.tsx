@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { Language } from '../types';
-import { UI_TEXT } from '../constants';
+import { UI_TEXT, BOOKING_URL } from '../constants';
 
 interface FooterProps {
   onNavigate: (target: string) => void;
@@ -22,7 +23,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, language }) => {
         <div className="flex flex-wrap justify-center gap-6 text-zinc-600 dark:text-zinc-400">
           <button onClick={() => onNavigate('about')} className="hover:text-emerald-500 transition-colors">{t.links.about}</button>
           <button onClick={() => onNavigate('home')} className="hover:text-emerald-500 transition-colors">{t.links.blog}</button>
-          <button onClick={() => onNavigate('home')} className="hover:text-emerald-500 transition-colors">{t.links.contact}</button>
+          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="hover:text-emerald-500 transition-colors">{t.links.contact}</a>
           <button onClick={() => onNavigate('home')} className="hover:text-emerald-500 transition-colors">{t.links.legal}</button>
         </div>
 

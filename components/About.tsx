@@ -1,6 +1,7 @@
+
 import React from 'react';
-import { ArrowLeft, Linkedin, Twitter } from 'lucide-react';
-import { UI_TEXT } from '../constants';
+import { ArrowLeft, Linkedin, Twitter, Calendar } from 'lucide-react';
+import { UI_TEXT, BOOKING_URL } from '../constants';
 import { Language } from '../types';
 
 interface AboutProps {
@@ -41,6 +42,9 @@ const About: React.FC<AboutProps> = ({ onBack, language }) => {
                </a>
                <a href="https://www.linkedin.com/in/tewfiq/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-[#0077b5] hover:text-white transition-all duration-300 transform hover:scale-110">
                  <Linkedin size={20} />
+               </a>
+               <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-emerald-500 hover:text-white transition-all duration-300 transform hover:scale-110" title="Book a meeting">
+                 <Calendar size={20} />
                </a>
              </div>
 

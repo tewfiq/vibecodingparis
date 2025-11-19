@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Section } from './ui/Section';
-import { PRICING_TIERS, UI_TEXT } from '../constants';
+import { PRICING_TIERS, UI_TEXT, BOOKING_URL } from '../constants';
 import { Check } from 'lucide-react';
 import { Language } from '../types';
 
@@ -56,20 +56,24 @@ const Pricing: React.FC<PricingProps> = ({ language }) => {
               ))}
             </ul>
 
-            <button className={`w-full py-4 rounded-xl font-bold transition-all ${
+            <a 
+              href={tier.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`block text-center w-full py-4 rounded-xl font-bold transition-all ${
               tier.highlight
                 ? 'bg-emerald-500 hover:bg-emerald-600 text-white shadow-lg shadow-emerald-500/25 hover:scale-[1.02]'
                 : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white hover:bg-zinc-200 dark:hover:bg-zinc-700'
             }`}>
               {tier.cta}
-            </button>
+            </a>
           </div>
         ))}
       </div>
 
       <div className="mt-12 text-center">
         <p className="text-zinc-500 text-sm">
-          {t.company} <a href="#" className="text-emerald-500 underline font-medium">{t.companyLink}</a>
+          {t.company} <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="text-emerald-500 underline font-medium">{t.companyLink}</a>
         </p>
       </div>
     </Section>

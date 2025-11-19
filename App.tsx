@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import Notification from './components/Notification';
 import About from './components/About';
 import CookieConsent from './components/CookieConsent';
+import SEO from './components/SEO';
 import { Language } from './types';
 
 export type ViewState = 'home' | 'about';
@@ -67,41 +68,44 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-zinc-950 text-zinc-900 dark:text-white font-sans selection:bg-emerald-500 selection:text-white transition-colors duration-300">
-      <Navbar 
-        darkMode={darkMode} 
-        toggleDarkMode={toggleDarkMode} 
-        language={language}
-        toggleLanguage={toggleLanguage}
-        onNavigate={handleNavigate}
-        currentView={currentView}
-      />
-      
-      <main className="relative">
-        {/* Background Gradients for "Vibe" */}
-        <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-emerald-500/10 dark:bg-emerald-500/5 blur-[100px] rounded-full pointer-events-none -z-10" />
+    <>
+      <SEO language={language} view={currentView} />
+      <div className="min-h-screen bg-white dark:bg-zinc-950 text-zinc-900 dark:text-white font-sans selection:bg-emerald-500 selection:text-white transition-colors duration-300">
+        <Navbar 
+          darkMode={darkMode} 
+          toggleDarkMode={toggleDarkMode} 
+          language={language}
+          toggleLanguage={toggleLanguage}
+          onNavigate={handleNavigate}
+          currentView={currentView}
+        />
         
-        {currentView === 'home' ? (
-          <div className="animate-fade-in-up">
-            <Hero language={language} />
-            <SocialProof />
-            <Features language={language} />
-            <Pricing language={language} />
-            <Changelog language={language} />
-            <FAQ language={language} />
-          </div>
-        ) : (
-          <div className="animate-fade-in-up">
-            <About language={language} onBack={() => handleNavigate('home')} />
-          </div>
-        )}
-      </main>
+        <main className="relative">
+          {/* Background Gradients for "Vibe" */}
+          <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-emerald-500/10 dark:bg-emerald-500/5 blur-[100px] rounded-full pointer-events-none -z-10" />
+          
+          {currentView === 'home' ? (
+            <div className="animate-fade-in-up">
+              <Hero language={language} />
+              <SocialProof />
+              <Features language={language} />
+              <Pricing language={language} />
+              <Changelog language={language} />
+              <FAQ language={language} />
+            </div>
+          ) : (
+            <div className="animate-fade-in-up">
+              <About language={language} onBack={() => handleNavigate('home')} />
+            </div>
+          )}
+        </main>
 
-      <Footer language={language} onNavigate={handleNavigate} />
-      
-      <CookieConsent language={language} />
-      {currentView === 'home' && <Notification language={language} />}
-    </div>
+        <Footer language={language} onNavigate={handleNavigate} />
+        
+        <CookieConsent language={language} />
+        {currentView === 'home' && <Notification language={language} />}
+      </div>
+    </>
   );
 }
 
