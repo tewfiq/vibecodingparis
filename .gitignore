@@ -22,11 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-# Branch-specific files (do not delete)
-# CLAUDE.md - Claude Code workflow configuration
-# .geminiignore - Gemini workflow configuration (if created)
-
-# Prevent accidental deletion by different AI tools
-!CLAUDE.md
-!.geminiignore

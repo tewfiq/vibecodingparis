@@ -52,7 +52,7 @@ export const PRICING_TIERS: Record<'fr' | 'en', PricingTier[]> = {
     {
       name: 'Student / Under 26',
       price: '€149',
-      description: 'For students and job seekers. A decisive skill for your future.',
+      description: 'For students and job seekers.\nA decisive skill for your future.',
       features: [
         'Full 2h in-person workshop',
         'Coaching & personalized support',
@@ -184,7 +184,7 @@ export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
       bentoAdvantageTitle: "L'avantage injuste.",
       bentoAdvantageDesc: "Pendant que d'autres apprennent la syntaxe Python, vous apprenez à orchestrer l'IA.\nC'est la compétence la plus levier de la décennie.",
       bentoLangTitle: "En Français",
-      bentoLangDesc: "\"Crée une app de to-do list\".\nC'est tout ce que vous avez à dire.\nLa barrière de la langue n'existe plus.",
+      bentoLangDesc: "Ne traduisez plus vos idées.\n\"Crée-moi une landing page minimaliste\".\nC'est la seule syntaxe que vous devez maîtriser.\nL'IA comprend le français, le contexte et vos intentions.\nLa barrière de la langue technique est brisée.",
       cardDesign: "Design System",
       cardDesignDesc: "Inclus automatiquement.",
       cardDeploy: "Déploiement",
@@ -231,7 +231,7 @@ export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
       bio4: "Early adopter invétéré et passionné par la veille technologique, il mêle design, digital, business et mentoring pour développer des solutions innovantes et percutantes.",
     },
     cookieConsent: {
-      text: "Nous utilisons des cookies pour rendre votre expérience incroyable.",
+      text: "Ce site utilise des cookies pour fonctionner. Rien de personnel.",
       accept: "Accepter",
       decline: "Refuser"
     }
@@ -240,7 +240,7 @@ export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
     hero: {
       badge: "Next Session: December 2025",
       title: "One skill \nin 2 hours.",
-      subtitle: "Learn to code without coding. From idea to live site, using AI as your copilot. Nothing personal, just shipping.",
+      subtitle: "Learn to code without coding.\nFrom idea to live site, using AI as your copilot.\nNothing personal, just shipping.",
       ctaPrimary: "Sign up — €149",
       ctaSecondary: "The Program",
       socialProof: ["+1000 trained", "Central Paris", "Beginners welcome"],
@@ -249,11 +249,11 @@ export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
     },
     features: {
       title: "No magic.\nJust method.",
-      subtitle: "In 2 hours, we go from abstract to concrete. A structured approach to taming LLMs.",
+      subtitle: "In 2 hours, we go from abstract to concrete.\nA structured approach to taming LLMs.",
       bentoAdvantageTitle: "The unfair advantage.",
-      bentoAdvantageDesc: "While others learn Python syntax, you learn to orchestrate AI. It's the highest leverage skill of the decade.",
+      bentoAdvantageDesc: "While others learn Python syntax, you learn to orchestrate AI.\nIt's the highest leverage skill of the decade.",
       bentoLangTitle: "Natural Language",
-      bentoLangDesc: "\"Create a to-do list app\". That's all you have to say. The language barrier is gone.",
+      bentoLangDesc: "Stop translating your ideas.\n\"Create a minimalist landing page\".\nThis is the only syntax you need to master.\nAI understands natural language, context, and intent.\nThe technical language barrier is broken.",
       cardDesign: "Design System",
       cardDesignDesc: "Included automatically.",
       cardDeploy: "Deployment",
@@ -261,7 +261,7 @@ export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
     },
     pricing: {
       title: "Invest in yourself.",
-      subtitle: "Clear pricing. A lifelong skill.",
+      subtitle: "Clear pricing.\nA lifelong skill.",
       company: "🏢 Companies or Schools?",
       companyLink: "Request a quote",
     },
@@ -300,7 +300,7 @@ export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
       bio4: "An inveterate early adopter passionate about tech trends, he blends design, digital, business, and mentoring to develop innovative and impactful solutions.",
     },
     cookieConsent: {
-      text: "We use cookies to make your experience amazing.",
+      text: "This site uses cookies to function. Nothing personal.",
       accept: "Accept",
       decline: "Decline"
     }
