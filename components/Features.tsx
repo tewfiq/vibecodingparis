@@ -62,12 +62,12 @@ const Features: React.FC<FeaturesProps> = ({ language }) => {
         </div>
 
         {/* Tall Card */}
-        <div className="col-span-1 md:col-span-1 lg:col-span-1 row-span-2 bg-emerald-50 dark:bg-emerald-900/10 border border-emerald-100 dark:border-emerald-900/50 rounded-3xl p-8 flex flex-col items-center text-center justify-center">
+        <div className="col-span-1 md:col-span-1 lg:col-span-1 row-span-2 bg-emerald-50 dark:bg-emerald-900/10 border border-emerald-100 dark:border-emerald-900/50 rounded-3xl p-8 flex flex-col items-start text-left justify-center">
           <div className="w-20 h-20 rounded-full bg-emerald-100 dark:bg-emerald-900 flex items-center justify-center mb-6 text-4xl">
             {language === 'fr' ? '🇫🇷' : '🌍'}
           </div>
           <h3 className="text-xl font-bold mb-2 text-emerald-900 dark:text-emerald-100">{t.bentoLangTitle}</h3>
-          <p className="text-sm text-emerald-800 dark:text-emerald-200/70 whitespace-pre-line">
+          <p className="text-sm text-emerald-800 dark:text-emerald-200/70 whitespace-pre-line leading-relaxed">
             {t.bentoLangDesc}
           </p>
         </div>
