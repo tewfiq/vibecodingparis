@@ -181,7 +181,7 @@ export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
     hero: {
       badge: "Prochaine Session : Décembre 2025",
       title: "Une compétence \nen 2 heures.",
-      subtitle: "Apprenez à coder sans coder.\nDe l'idée au site en ligne, en français, avec l'IA comme copilote.\nRien de personnel, juste du shipping.",
+      subtitle: "Apprenez à coder sans coder. De l'idée au site en ligne, en français, avec l'IA comme copilote. Rien de personnel, juste du shipping.",
       ctaPrimary: "Je m'inscris — 149 €",
       ctaSecondary: "Le Programme",
       socialProof: ["+1000 formés", "Paris Centre", "Débutant accepté"],
@@ -250,7 +250,7 @@ export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
     hero: {
       badge: "Next Session: December 2025",
       title: "One skill \nin 2 hours.",
-      subtitle: "Learn to code without coding.\nFrom idea to live site, using AI as your copilot.\nNothing personal, just shipping.",
+      subtitle: "Learn to code without coding. From idea to live site, using AI as your copilot. Nothing personal, just shipping.",
       ctaPrimary: "Sign up — €149",
       ctaSecondary: "The Program",
       socialProof: ["+1000 trained", "Central Paris", "Beginners welcome"],
