@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Section } from './ui/Section';
 import { PRICING_TIERS, UI_TEXT } from '../constants';
@@ -16,7 +17,7 @@ const Pricing: React.FC<PricingProps> = ({ language }) => {
     <Section id="pricing" className="bg-zinc-50 dark:bg-zinc-900/30">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-5xl font-bold mb-4">{t.title}</h2>
-        <p className="text-zinc-500 dark:text-zinc-400">{t.subtitle}</p>
+        <p className="text-zinc-500 dark:text-zinc-400 whitespace-pre-line">{t.subtitle}</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -41,7 +42,7 @@ const Pricing: React.FC<PricingProps> = ({ language }) => {
                 <span className="text-4xl font-extrabold text-zinc-900 dark:text-white">{tier.price}</span>
                 <span className="text-zinc-400 text-sm">/ session</span>
               </div>
-              <p className="mt-4 text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+              <p className="mt-4 text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed whitespace-pre-line">
                 {tier.description}
               </p>
             </div>

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Section } from './ui/Section';
 import { FEATURES, UI_TEXT } from '../constants';
@@ -16,7 +17,7 @@ const Features: React.FC<FeaturesProps> = ({ language }) => {
     <Section id="programme">
       <div className="text-center mb-20">
         <h2 className="text-3xl md:text-5xl font-bold mb-6 whitespace-pre-line">{t.title}</h2>
-        <p className="text-zinc-500 dark:text-zinc-400 text-lg max-w-2xl mx-auto">{t.subtitle}</p>
+        <p className="text-zinc-500 dark:text-zinc-400 text-lg max-w-2xl mx-auto whitespace-pre-line">{t.subtitle}</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -44,7 +45,7 @@ const Features: React.FC<FeaturesProps> = ({ language }) => {
            <div>
              <div className="inline-block px-3 py-1 rounded-full bg-emerald-500 text-white text-xs font-bold mb-6">FUTURE PROOF</div>
              <h3 className="text-3xl md:text-4xl font-bold mb-4">{t.bentoAdvantageTitle}</h3>
-             <p className="text-zinc-400 text-lg">{t.bentoAdvantageDesc}</p>
+             <p className="text-zinc-400 text-lg whitespace-pre-line">{t.bentoAdvantageDesc}</p>
            </div>
            <div className="mt-8">
              <div className="bg-zinc-800/50 rounded-xl p-4 backdrop-blur-sm border border-zinc-700">
@@ -66,7 +67,7 @@ const Features: React.FC<FeaturesProps> = ({ language }) => {
             {language === 'fr' ? '🇫🇷' : '🌍'}
           </div>
           <h3 className="text-xl font-bold mb-2 text-emerald-900 dark:text-emerald-100">{t.bentoLangTitle}</h3>
-          <p className="text-sm text-emerald-800 dark:text-emerald-200/70">
+          <p className="text-sm text-emerald-800 dark:text-emerald-200/70 whitespace-pre-line">
             {t.bentoLangDesc}
           </p>
         </div>

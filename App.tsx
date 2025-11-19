@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -9,6 +10,7 @@ import Changelog from './components/Changelog';
 import Footer from './components/Footer';
 import Notification from './components/Notification';
 import About from './components/About';
+import CookieConsent from './components/CookieConsent';
 import { Language } from './types';
 
 export type ViewState = 'home' | 'about';
@@ -97,6 +99,7 @@ function App() {
 
       <Footer language={language} onNavigate={handleNavigate} />
       
+      <CookieConsent language={language} />
       {currentView === 'home' && <Notification language={language} />}
     </div>
   );

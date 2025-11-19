@@ -1,3 +1,4 @@
+
 import { NavItem, PricingTier, FaqItem, Commit, Feature, UiTranslation } from './types';
 import { Code, Zap, Box, Globe } from 'lucide-react';
 
@@ -21,7 +22,7 @@ export const PRICING_TIERS: Record<'fr' | 'en', PricingTier[]> = {
     {
       name: 'Étudiant / -26 ans',
       price: '149 €',
-      description: 'Pour les étudiants et demandeurs d\'emploi. Une compétence décisive pour votre avenir.',
+      description: 'Pour les étudiants et demandeurs d\'emploi.\nUne compétence décisive pour votre avenir.',
       features: [
         'Atelier 2h complet en présentiel',
         'Coaching & accompagnement personnalisé',
@@ -170,7 +171,7 @@ export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
     hero: {
       badge: "Prochaine Session : Décembre 2025",
       title: "Une compétence \nen 2 heures.",
-      subtitle: "Apprenez à coder sans coder. De l'idée au site en ligne, en français, avec l'IA comme copilote. Rien de personnel, juste du shipping.",
+      subtitle: "Apprenez à coder sans coder.\nDe l'idée au site en ligne, en français, avec l'IA comme copilote.\nRien de personnel, juste du shipping.",
       ctaPrimary: "Je m'inscris — 149 €",
       ctaSecondary: "Le Programme",
       socialProof: ["+1000 formés", "Paris Centre", "Débutant accepté"],
@@ -179,11 +180,11 @@ export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
     },
     features: {
       title: "Rien de magique.\nJuste de la méthode.",
-      subtitle: "En 2 heures, nous passons de l'abstrait au concret. Une approche structurée pour dompter les LLMs.",
+      subtitle: "En 2 heures, nous passons de l'abstrait au concret.\nUne approche structurée pour dompter les LLMs.",
       bentoAdvantageTitle: "L'avantage injuste.",
-      bentoAdvantageDesc: "Pendant que d'autres apprennent la syntaxe Python, vous apprenez à orchestrer l'IA. C'est la compétence la plus levier de la décennie.",
+      bentoAdvantageDesc: "Pendant que d'autres apprennent la syntaxe Python, vous apprenez à orchestrer l'IA.\nC'est la compétence la plus levier de la décennie.",
       bentoLangTitle: "En Français",
-      bentoLangDesc: "\"Crée une app de to-do list\". C'est tout ce que vous avez à dire. La barrière de la langue n'existe plus.",
+      bentoLangDesc: "\"Crée une app de to-do list\".\nC'est tout ce que vous avez à dire.\nLa barrière de la langue n'existe plus.",
       cardDesign: "Design System",
       cardDesignDesc: "Inclus automatiquement.",
       cardDeploy: "Déploiement",
@@ -191,7 +192,7 @@ export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
     },
     pricing: {
       title: "Investissez en vous.",
-      subtitle: "Des tarifs clairs. Une compétence à vie.",
+      subtitle: "Des tarifs clairs.\nUne compétence à vie.",
       company: "🏢 Entreprises ou Écoles ?",
       companyLink: "Demandez un devis",
     },
@@ -228,6 +229,11 @@ export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
       quote: "\"Ma mission est de rendre le Design Stratégique et les Solutions de Generative AI accessibles à tous, en combinant Créativité, Technologies et Business pour générer des impacts significatifs.\"",
       bio3: "Diplômé en sciences économiques, il a cofondé deux Startups à Paris et San Francisco, apportant un mindset entrepreneurial authentique et une expertise pointue en technologies émergentes.",
       bio4: "Early adopter invétéré et passionné par la veille technologique, il mêle design, digital, business et mentoring pour développer des solutions innovantes et percutantes.",
+    },
+    cookieConsent: {
+      text: "Nous utilisons des cookies pour rendre votre expérience incroyable.",
+      accept: "Accepter",
+      decline: "Refuser"
     }
   },
   en: {
@@ -292,6 +298,11 @@ export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
       quote: "\"My mission is to make Strategic Design and Generative AI Solutions accessible to everyone, combining Creativity, Technology, and Business to generate significant impact.\"",
       bio3: "A graduate in Economics, he co-founded two Startups in Paris and San Francisco, bringing an authentic entrepreneurial mindset and deep expertise in emerging technologies.",
       bio4: "An inveterate early adopter passionate about tech trends, he blends design, digital, business, and mentoring to develop innovative and impactful solutions.",
+    },
+    cookieConsent: {
+      text: "We use cookies to make your experience amazing.",
+      accept: "Accept",
+      decline: "Decline"
     }
   }
 };

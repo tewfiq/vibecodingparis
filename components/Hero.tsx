@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowRight, Terminal, CheckCircle2 } from 'lucide-react';
 import { Section } from './ui/Section';
@@ -27,7 +28,7 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
             {t.title}
           </h1>
 
-          <p className="text-xl text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+          <p className="text-xl text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed whitespace-pre-line">
             {t.subtitle}
           </p>
 

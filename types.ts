@@ -1,3 +1,4 @@
+
 export type Language = 'fr' | 'en';
 
 export interface NavItem {
@@ -94,5 +95,10 @@ export interface UiTranslation {
     quote: string;
     bio3: string;
     bio4: string;
+  };
+  cookieConsent: {
+    text: string;
+    accept: string;
+    decline: string;
   };
 }
