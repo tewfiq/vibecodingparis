@@ -32,8 +32,8 @@ const Changelog: React.FC<ChangelogProps> = ({ language }) => {
         setCommits(formattedCommits);
         setIsLive(true);
       } catch (error) {
-        console.warn('Using fallback commit data due to API error:', error);
-        // Keep initial RECENT_COMMITS
+        // Fallback silently to default data for private repos or API limits
+        console.log('Using fallback commit data (API inaccessible)');
       } finally {
         setLoading(false);
       }

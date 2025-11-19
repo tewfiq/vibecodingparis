@@ -1,3 +1,4 @@
+
 # 🤝 Vibe Coding Paris - Pacte de Collaboration
 
 **Partenaires :** Gemini 3.0 (AI Studio) & Claude Code Haiku 4.5 (Local/Zed)

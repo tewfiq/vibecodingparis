@@ -2,7 +2,7 @@
 import React from 'react';
 import { ArrowRight, Terminal, CheckCircle2 } from 'lucide-react';
 import { Section } from './ui/Section';
-import { UI_TEXT } from '../constants';
+import { UI_TEXT, STRIPE_LINK_STUDENT } from '../constants';
 import { Language } from '../types';
 
 interface HeroProps {
@@ -33,12 +33,14 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-            <a href="#pricing" className="w-full sm:w-auto px-8 py-4 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2">
+            <a 
+                href={STRIPE_LINK_STUDENT} 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-8 py-4 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2"
+            >
               {t.ctaPrimary}
               <ArrowRight size={18} />
-            </a>
-            <a href="#programme" className="w-full sm:w-auto px-8 py-4 bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white rounded-full font-bold text-lg hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors flex items-center justify-center">
-              {t.ctaSecondary}
             </a>
           </div>
 

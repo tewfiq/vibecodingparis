@@ -4,6 +4,8 @@ import { Code, Zap, Box, Globe } from 'lucide-react';
 
 export const BOOKING_URL = "https://cal.com/tewfiqferahi/15min";
 export const GITHUB_REPO = "tewfiq/vibecodingparis"; // Change this to your actual public repo name
+export const STRIPE_LINK_STUDENT = "https://buy.stripe.com/bJe8wQ3dN7NGc5EcJv7EQ0b";
+export const STRIPE_LINK_STANDARD = "https://buy.stripe.com/bJe5kEdSrgkcfhQaBn7EQ0c";
 
 export const NAV_ITEMS: Record<'fr' | 'en', NavItem[]> = {
   fr: [
@@ -35,7 +37,7 @@ export const PRICING_TIERS: Record<'fr' | 'en', PricingTier[]> = {
       ],
       highlight: true,
       cta: "Je m'inscris — 149 €",
-      link: "https://buy.stripe.com/bJe8wQ3dN7NGc5EcJv7EQ0b"
+      link: STRIPE_LINK_STUDENT
     },
     {
       name: 'Standard',
@@ -50,7 +52,7 @@ export const PRICING_TIERS: Record<'fr' | 'en', PricingTier[]> = {
       ],
       highlight: false,
       cta: "Réserver — 299 €",
-      link: "https://buy.stripe.com/bJe5kEdSrgkcfhQaBn7EQ0c"
+      link: STRIPE_LINK_STANDARD
     }
   ],
   en: [
@@ -67,7 +69,7 @@ export const PRICING_TIERS: Record<'fr' | 'en', PricingTier[]> = {
       ],
       highlight: true,
       cta: "Sign up — €149",
-      link: "https://buy.stripe.com/bJe8wQ3dN7NGc5EcJv7EQ0b"
+      link: STRIPE_LINK_STUDENT
     },
     {
       name: 'Standard',
@@ -82,7 +84,7 @@ export const PRICING_TIERS: Record<'fr' | 'en', PricingTier[]> = {
       ],
       highlight: false,
       cta: "Book now — €299",
-      link: "https://buy.stripe.com/bJe5kEdSrgkcfhQaBn7EQ0c"
+      link: STRIPE_LINK_STANDARD
     }
   ]
 };
@@ -192,7 +194,7 @@ export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
       bentoAdvantageTitle: "L'avantage injuste.",
       bentoAdvantageDesc: "Pendant que d'autres apprennent la syntaxe Python, vous apprenez à orchestrer l'IA.\nC'est la compétence la plus levier de la décennie.",
       bentoLangTitle: "En Français",
-      bentoLangDesc: "En Français\n\"Crée une app de to-do list\".\nC'est tout ce que vous avez à dire.\nLa barrière de la langue n'existe plus.",
+      bentoLangDesc: "\"Crée une app de to-do list\".\nC'est tout ce que vous avez à dire.\nLa barrière de la langue n'existe plus.\n\nPlus de syntaxe à apprendre. Concentrez-vous uniquement sur la valeur de votre produit.",
       cardDesign: "Design System",
       cardDesignDesc: "Inclus automatiquement.",
       cardDeploy: "Déploiement",
@@ -261,7 +263,7 @@ export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
       bentoAdvantageTitle: "The unfair advantage.",
       bentoAdvantageDesc: "While others learn Python syntax, you learn to orchestrate AI.\nIt's the highest leverage skill of the decade.",
       bentoLangTitle: "Natural Language",
-      bentoLangDesc: "In English\n\"Create a to-do list app\".\nThat's all you have to say.\nThe language barrier is gone.",
+      bentoLangDesc: "\"Create a to-do list app\".\nThat's all you have to say.\nThe language barrier is gone.\n\nNo more syntax to learn. Focus solely on the value of your product.",
       cardDesign: "Design System",
       cardDesignDesc: "Included automatically.",
       cardDeploy: "Deployment",
