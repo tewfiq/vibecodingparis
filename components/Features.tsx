@@ -53,8 +53,8 @@ const Features: React.FC<FeaturesProps> = ({ language }) => {
                  <div className="text-xs text-zinc-400">Terminal</div>
                </div>
                <code className="text-sm font-mono text-emerald-400">
-                 &gt; VibeCoding.init({'{'} skill: "Rare" {'}'});<br/>
-                 &gt; Success.
+                 > VibeCoding.init({'{'} skill: "Rare" {'}'});<br/>
+                 > Success.
                </code>
              </div>
            </div>
