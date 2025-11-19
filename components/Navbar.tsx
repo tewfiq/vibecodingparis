@@ -1,7 +1,9 @@
+
 import React, { useState, useEffect } from 'react';
-import { Moon, Sun, Menu, X, Languages } from 'lucide-react';
+import { Moon, Sun, Menu, X } from 'lucide-react';
 import { NAV_ITEMS } from '../constants';
 import { Language } from '../types';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface NavbarProps {
   darkMode: boolean;
@@ -36,10 +38,15 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode, language, tog
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'glass border-b border-zinc-200 dark:border-zinc-800 py-4' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <button onClick={() => handleNavClick('home')} className="text-xl font-bold tracking-tighter flex items-center gap-2">
+        <motion.button 
+          onClick={() => handleNavClick('home')} 
+          className="text-xl font-bold tracking-tighter flex items-center gap-2"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
           <div className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse" />
           Vibe Coding<span className="hidden sm:inline opacity-50 font-normal">Paris</span>
-        </button>
+        </motion.button>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
@@ -54,28 +61,32 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode, language, tog
           ))}
           
           <div className="flex items-center gap-2 border-l border-zinc-200 dark:border-zinc-800 pl-6">
-            <button 
+            <motion.button 
                 onClick={toggleLanguage}
                 className="p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors font-mono text-xs font-bold"
                 aria-label="Toggle Language"
+                whileTap={{ scale: 0.8, rotate: 180 }}
             >
                 {language.toUpperCase()}
-            </button>
-            <button 
+            </motion.button>
+            <motion.button 
                 onClick={toggleDarkMode}
                 className="p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
                 aria-label="Toggle Theme"
+                whileTap={{ scale: 0.8, rotate: 90 }}
             >
                 {darkMode ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
+            </motion.button>
           </div>
 
-          <button 
+          <motion.button 
             onClick={() => handleNavClick('#pricing')}
-            className="bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 px-5 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 px-5 py-2 rounded-full text-sm font-semibold"
           >
             {reserveLabel}
-          </button>
+          </motion.button>
         </div>
 
         {/* Mobile Toggle */}
@@ -99,25 +110,32 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode, language, tog
       </div>
 
       {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="absolute top-full left-0 right-0 bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800 p-6 md:hidden flex flex-col gap-4 shadow-xl animate-in slide-in-from-top-5">
-           {items.map((item) => (
-            <button 
-              key={item.label} 
-              onClick={() => handleNavClick(item.href)}
-              className="text-lg font-medium text-zinc-800 dark:text-zinc-200 py-2 border-b border-zinc-100 dark:border-zinc-900 text-left"
-            >
-              {item.label}
-            </button>
-          ))}
-          <button 
-            onClick={() => handleNavClick('#pricing')}
-            className="bg-emerald-600 text-white w-full py-3 rounded-xl text-center font-bold mt-2"
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div 
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="absolute top-full left-0 right-0 bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800 p-6 md:hidden flex flex-col gap-4 shadow-xl overflow-hidden"
           >
-            {reserveMobileLabel}
-          </button>
-        </div>
-      )}
+             {items.map((item) => (
+              <button 
+                key={item.label} 
+                onClick={() => handleNavClick(item.href)}
+                className="text-lg font-medium text-zinc-800 dark:text-zinc-200 py-2 border-b border-zinc-100 dark:border-zinc-900 text-left"
+              >
+                {item.label}
+              </button>
+            ))}
+            <button 
+              onClick={() => handleNavClick('#pricing')}
+              className="bg-emerald-600 text-white w-full py-3 rounded-xl text-center font-bold mt-2"
+            >
+              {reserveMobileLabel}
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

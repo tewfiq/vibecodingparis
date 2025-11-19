@@ -40,7 +40,7 @@ export const PRICING_TIERS: Record<'fr' | 'en', PricingTier[]> = {
       link: STRIPE_LINK_STUDENT
     },
     {
-      name: 'Standard',
+      name: 'Professionnel',
       price: '299 €',
       description: 'Pour les professionnels souhaitant maîtriser le Product Building assisté par IA.',
       features: [
@@ -72,7 +72,7 @@ export const PRICING_TIERS: Record<'fr' | 'en', PricingTier[]> = {
       link: STRIPE_LINK_STUDENT
     },
     {
-      name: 'Standard',
+      name: 'Professional',
       price: '€299',
       description: 'For professionals wanting to master AI-assisted Product Building.',
       features: [

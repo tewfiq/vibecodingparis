@@ -4,6 +4,7 @@ import { Section } from './ui/Section';
 import { PRICING_TIERS, UI_TEXT, BOOKING_URL } from '../constants';
 import { Check } from 'lucide-react';
 import { Language } from '../types';
+import { motion } from 'framer-motion';
 
 interface PricingProps {
   language: Language;
@@ -15,15 +16,24 @@ const Pricing: React.FC<PricingProps> = ({ language }) => {
 
   return (
     <Section id="pricing" className="bg-zinc-50 dark:bg-zinc-900/30">
-      <div className="text-center mb-16">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="text-center mb-16"
+      >
         <h2 className="text-3xl md:text-5xl font-bold mb-4">{t.title}</h2>
         <p className="text-zinc-500 dark:text-zinc-400 whitespace-pre-line">{t.subtitle}</p>
-      </div>
+      </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {tiers.map((tier, idx) => (
-          <div 
+          <motion.div 
             key={idx}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: idx * 0.2, type: 'spring', stiffness: 50 }}
             className={`relative rounded-3xl p-8 flex flex-col ${
               tier.highlight 
                 ? 'bg-white dark:bg-zinc-900 border-2 border-emerald-500 shadow-xl shadow-emerald-500/10' 
@@ -56,24 +66,26 @@ const Pricing: React.FC<PricingProps> = ({ language }) => {
               ))}
             </ul>
 
-            <a 
+            <motion.a 
               href={tier.link}
               target="_blank"
               rel="noopener noreferrer"
-              className={`block text-center w-full py-4 rounded-xl font-bold transition-all ${
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className={`block text-center w-full py-4 rounded-xl font-bold transition-colors ${
               tier.highlight
-                ? 'bg-emerald-500 hover:bg-emerald-600 text-white shadow-lg shadow-emerald-500/25 hover:scale-[1.02]'
+                ? 'bg-emerald-500 hover:bg-emerald-600 text-white shadow-lg shadow-emerald-500/25'
                 : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white hover:bg-zinc-200 dark:hover:bg-zinc-700'
             }`}>
               {tier.cta}
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
         ))}
       </div>
 
       <div className="mt-12 text-center">
         <p className="text-zinc-500 text-sm">
-          {t.company} <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="text-emerald-500 underline font-medium">{t.companyLink}</a>
+          {t.company} <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="text-emerald-500 underline font-medium hover:text-emerald-400 transition-colors">{t.companyLink}</a>
         </p>
       </div>
     </Section>
