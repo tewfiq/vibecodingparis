@@ -5,6 +5,7 @@ import { Section } from './ui/Section';
 import { UI_TEXT, STRIPE_LINK_STUDENT } from '../constants';
 import { Language } from '../types';
 import { motion } from 'framer-motion';
+import { HandWrittenHighlight } from './ui/HandWrittenHighlight';
 
 interface HeroProps {
   language: Language;
@@ -56,12 +57,13 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
             </div>
           </motion.div>
 
-          <motion.h1 
-            variants={itemVariants}
-            className="text-5xl md:text-7xl font-extrabold tracking-tight text-zinc-900 dark:text-white leading-[1.1] whitespace-pre-line"
-          >
-            {t.title}
-          </motion.h1>
+          <motion.div variants={itemVariants}>
+            <HandWrittenHighlight delay={1.5}>
+                <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-zinc-900 dark:text-white leading-[1.1] whitespace-pre-line text-balance">
+                    {t.title}
+                </h1>
+            </HandWrittenHighlight>
+          </motion.div>
 
           <motion.p 
             variants={itemVariants}
