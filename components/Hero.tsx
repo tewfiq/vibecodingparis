@@ -1,10 +1,10 @@
+
 import React from 'react';
 import { ArrowRight, Terminal, CheckCircle2 } from 'lucide-react';
 import { Section } from './ui/Section';
 import { UI_TEXT, STRIPE_LINK_STUDENT } from '../constants';
 import { Language } from '../types';
 import { motion } from 'framer-motion';
-import FloatingIcons from './ui/FloatingIcons';
 
 interface HeroProps {
   language: Language;
@@ -39,11 +39,6 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
 
   return (
     <Section className="pt-32 md:pt-48 pb-20 relative">
-      {/* Floating Icons Background Layer */}
-      <div className="absolute inset-0 z-0">
-        <FloatingIcons />
-      </div>
-
       <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24 relative z-10">
         
         {/* Text Content */}
