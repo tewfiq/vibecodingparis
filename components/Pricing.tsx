@@ -5,6 +5,7 @@ import { PRICING_TIERS, UI_TEXT, BOOKING_URL } from '../constants';
 import { Check } from 'lucide-react';
 import { Language } from '../types';
 import { motion } from 'framer-motion';
+import { HandWrittenHighlight } from './ui/HandWrittenHighlight';
 
 interface PricingProps {
   language: Language;
@@ -22,7 +23,11 @@ const Pricing: React.FC<PricingProps> = ({ language }) => {
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <h2 className="text-3xl md:text-5xl font-bold mb-4">{t.title}</h2>
+        <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          <HandWrittenHighlight>
+            {t.title}
+          </HandWrittenHighlight>
+        </h2>
         <p className="text-zinc-500 dark:text-zinc-400 whitespace-pre-line">{t.subtitle}</p>
       </motion.div>
 
