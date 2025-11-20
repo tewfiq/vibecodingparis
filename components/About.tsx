@@ -26,10 +26,26 @@ const About: React.FC<AboutProps> = ({ onBack, language }) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
           {/* Left Column: Profile & Quick Info */}
           <div className="lg:col-span-4 flex flex-col items-start">
-             <div className="relative w-48 h-48 mb-8">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-emerald-400 to-teal-600 blur-2xl opacity-20 animate-pulse"></div>
-                <div className="relative w-full h-full rounded-full bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-800 dark:to-zinc-900 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center shadow-xl overflow-hidden">
-                  <span className="text-5xl font-bold text-emerald-600 dark:text-emerald-400 tracking-tighter">TF</span>
+             <div className="relative w-64 h-64 mb-8 group cursor-pointer">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-emerald-400 to-teal-600 blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500 animate-pulse"></div>
+                <div className="relative w-full h-full rounded-full border-[6px] border-white dark:border-zinc-800 shadow-2xl overflow-hidden ring-1 ring-zinc-200 dark:ring-zinc-700">
+                  <img 
+                    src="/tewfiq-profile.jpg" 
+                    alt="Tewfiq Ferahi" 
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                    onError={(e) => {
+                      // Fallback if image not found
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.parentElement?.classList.add('bg-zinc-100', 'dark:bg-zinc-800', 'flex', 'items-center', 'justify-center');
+                      const span = document.createElement('span');
+                      span.className = 'text-5xl font-bold text-emerald-600 dark:text-emerald-400';
+                      span.innerText = 'TF';
+                      e.currentTarget.parentElement?.appendChild(span);
+                    }}
+                  />
+                </div>
+                <div className="absolute bottom-4 right-4 bg-emerald-500 text-white p-2 rounded-full shadow-lg border-4 border-white dark:border-zinc-950 transform group-hover:scale-110 transition-transform duration-300">
+                    <div className="animate-pulse w-3 h-3 bg-white rounded-full"></div>
                 </div>
              </div>
              
