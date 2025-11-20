@@ -30,7 +30,7 @@ const About: React.FC<AboutProps> = ({ onBack, language }) => {
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-emerald-400 to-teal-600 blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500 animate-pulse"></div>
                 <div className="relative w-full h-full rounded-full border-[6px] border-white dark:border-zinc-800 shadow-2xl overflow-hidden ring-1 ring-zinc-200 dark:ring-zinc-700">
                   <img 
-                    src="/tewfiq-profile.jpg" 
+                    src="/tewfiq-profile.jpeg" 
                     alt="Tewfiq Ferahi" 
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
                     onError={(e) => {
