@@ -34,13 +34,17 @@ const About: React.FC<AboutProps> = ({ onBack, language }) => {
                     alt="Tewfiq Ferahi" 
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
                     onError={(e) => {
-                      // Fallback if image not found
-                      e.currentTarget.style.display = 'none';
-                      e.currentTarget.parentElement?.classList.add('bg-zinc-100', 'dark:bg-zinc-800', 'flex', 'items-center', 'justify-center');
-                      const span = document.createElement('span');
-                      span.className = 'text-5xl font-bold text-emerald-600 dark:text-emerald-400';
-                      span.innerText = 'TF';
-                      e.currentTarget.parentElement?.appendChild(span);
+                      // Fallback if image not found or load error
+                      const target = e.currentTarget;
+                      target.style.display = 'none';
+                      const parent = target.parentElement;
+                      if (parent) {
+                        parent.classList.add('bg-zinc-100', 'dark:bg-zinc-800', 'flex', 'items-center', 'justify-center');
+                        const span = document.createElement('span');
+                        span.className = 'text-5xl font-bold text-emerald-600 dark:text-emerald-400';
+                        span.innerText = 'TF';
+                        parent.appendChild(span);
+                      }
                     }}
                   />
                 </div>
