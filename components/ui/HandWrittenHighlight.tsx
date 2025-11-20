@@ -74,11 +74,12 @@ export function HandWrittenHighlight({
                 {children}
             </div>
 
-            <div className="absolute -inset-x-6 -inset-y-3 md:-inset-x-10 md:-inset-y-6 lg:-inset-x-14 lg:-inset-y-8 z-20 pointer-events-none flex items-center justify-center">
+            <div className="absolute -inset-x-6 -inset-y-3 md:-inset-x-10 md:-inset-y-6 lg:-inset-x-10 lg:-inset-y-8 z-20 pointer-events-none flex items-center justify-center">
                 <motion.svg
                     width="100%"
                     height="100%"
-                    viewBox="0 0 1200 600"
+                    // ViewBox ajusté de "0 0 1200 600" à "100 0 1200 600" pour recentrer la forme vers la gauche
+                    viewBox="100 0 1200 600"
                     preserveAspectRatio="none"
                     className={cn("w-full h-full opacity-80 dark:opacity-90 mix-blend-multiply dark:mix-blend-normal", pathColor)}
                     style={{ overflow: 'visible' }} 
