@@ -9,28 +9,48 @@ interface CookieConsentProps {
   language: Language;
 }
 
+// Helper to update Google Consent Mode
+const updateGtagConsent = (granted: boolean) => {
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    const status = granted ? 'granted' : 'denied';
+    (window as any).gtag('consent', 'update', {
+      'ad_storage': status,
+      'ad_user_data': status,
+      'ad_personalization': status,
+      'analytics_storage': status
+    });
+    console.log(`[Analytics] Consent updated to: ${status}`);
+  }
+};
+
 const CookieConsent: React.FC<CookieConsentProps> = ({ language }) => {
   const [isVisible, setIsVisible] = useState(false);
   const t = UI_TEXT[language].cookieConsent;
 
   useEffect(() => {
     const consent = localStorage.getItem('vibe-cookie-consent');
+    
     if (!consent) {
-      // Small delay for better UX
+      // No consent yet, show banner after delay
       const timer = setTimeout(() => {
         setIsVisible(true);
       }, 1500);
       return () => clearTimeout(timer);
+    } else {
+      // Consent already exists, enforce it in GTAG immediately
+      updateGtagConsent(consent === 'accepted');
     }
   }, []);
 
   const handleAccept = () => {
     localStorage.setItem('vibe-cookie-consent', 'accepted');
+    updateGtagConsent(true);
     setIsVisible(false);
   };
 
   const handleDecline = () => {
     localStorage.setItem('vibe-cookie-consent', 'declined');
+    updateGtagConsent(false);
     setIsVisible(false);
   };
 

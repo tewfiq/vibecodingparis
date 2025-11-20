@@ -27,6 +27,7 @@ export const PRICING_TIERS: Record<'fr' | 'en', PricingTier[]> = {
     {
       name: 'Étudiant / -26 ans',
       price: '149 €',
+      originalPrice: '299 €',
       description: 'Pour les étudiants et demandeurs d\'emploi.\nUne compétence décisive pour votre avenir.',
       features: [
         'Atelier 2h complet en présentiel',
@@ -42,6 +43,7 @@ export const PRICING_TIERS: Record<'fr' | 'en', PricingTier[]> = {
     {
       name: 'Professionnel',
       price: '299 €',
+      originalPrice: '599 €',
       description: 'Pour les professionnels souhaitant maîtriser le Product Building assisté par IA.',
       features: [
         'Atelier 2h intensif en présentiel',
@@ -59,6 +61,7 @@ export const PRICING_TIERS: Record<'fr' | 'en', PricingTier[]> = {
     {
       name: 'Student / Under 26',
       price: '€149',
+      originalPrice: '€299',
       description: 'For students and job seekers.\nA decisive skill for your future.',
       features: [
         'Full 2h in-person workshop',
@@ -74,6 +77,7 @@ export const PRICING_TIERS: Record<'fr' | 'en', PricingTier[]> = {
     {
       name: 'Professional',
       price: '€299',
+      originalPrice: '€599',
       description: 'For professionals wanting to master AI-assisted Product Building.',
       features: [
         'Intensive 2h in-person workshop',
@@ -205,6 +209,7 @@ export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
       subtitle: "Des tarifs clairs.\nUne compétence à vie.",
       company: "🏢 Entreprises ou Écoles ?",
       companyLink: "Demandez un devis",
+      launchPeriod: "⚡️ Prix de lancement valables pour les sessions des 3 prochains mois.",
     },
     faq: {
       title: "Questions Fréquentes",
@@ -274,6 +279,7 @@ export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
       subtitle: "Clear pricing.\nA lifelong skill.",
       company: "🏢 Companies or Schools?",
       companyLink: "Request a quote",
+      launchPeriod: "⚡️ Launch pricing valid for sessions in the next 3 months.",
     },
     faq: {
       title: "Frequently Asked Questions",

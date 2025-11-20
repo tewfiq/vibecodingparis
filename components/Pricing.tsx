@@ -34,10 +34,15 @@ const Pricing: React.FC<PricingProps> = ({ language }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: idx * 0.2, type: 'spring', stiffness: 50 }}
+            whileHover={!tier.highlight ? { 
+              scale: 1.02, 
+              boxShadow: "0 10px 30px -10px rgba(16, 185, 129, 0.1)",
+              borderColor: "rgba(16, 185, 129, 0.3)"
+            } : undefined}
             className={`relative rounded-3xl p-8 flex flex-col ${
               tier.highlight 
                 ? 'bg-white dark:bg-zinc-900 border-2 border-emerald-500 shadow-xl shadow-emerald-500/10' 
-                : 'bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 opacity-90 hover:opacity-100 transition-opacity'
+                : 'bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 opacity-90 hover:opacity-100 transition-all duration-300'
             }`}
           >
             {tier.highlight && (
@@ -48,10 +53,17 @@ const Pricing: React.FC<PricingProps> = ({ language }) => {
             
             <div className="mb-8">
               <h3 className="text-lg font-medium text-zinc-500 dark:text-zinc-400 mb-2">{tier.name}</h3>
-              <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-extrabold text-zinc-900 dark:text-white">{tier.price}</span>
-                <span className="text-zinc-400 text-sm">/ session</span>
+              
+              <div className="flex flex-col mb-1">
+                 <span className="text-zinc-400 dark:text-zinc-500 line-through text-lg font-medium w-fit">
+                   {tier.originalPrice}
+                 </span>
+                 <div className="flex items-baseline gap-1">
+                    <span className="text-4xl font-extrabold text-zinc-900 dark:text-white">{tier.price}</span>
+                    <span className="text-zinc-400 text-sm">/ session</span>
+                 </div>
               </div>
+
               <p className="mt-4 text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed whitespace-pre-line">
                 {tier.description}
               </p>
@@ -83,7 +95,10 @@ const Pricing: React.FC<PricingProps> = ({ language }) => {
         ))}
       </div>
 
-      <div className="mt-12 text-center">
+      <div className="mt-10 text-center space-y-2">
+        <p className="text-sm font-medium text-emerald-600 dark:text-emerald-400 animate-pulse">
+           {t.launchPeriod}
+        </p>
         <p className="text-zinc-500 text-sm">
           {t.company} <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="text-emerald-500 underline font-medium hover:text-emerald-400 transition-colors">{t.companyLink}</a>
         </p>

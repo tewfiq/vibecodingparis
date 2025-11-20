@@ -2,6 +2,7 @@
 import React from 'react';
 import { Language } from '../types';
 import { UI_TEXT, BOOKING_URL } from '../constants';
+import { motion } from 'framer-motion';
 
 interface FooterProps {
   onNavigate: (target: string) => void;
@@ -27,10 +28,22 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, language }) => {
           <button onClick={() => onNavigate('home')} className="hover:text-emerald-500 transition-colors">{t.links.legal}</button>
         </div>
 
-        <div className="flex gap-4">
-          <div className="w-3 h-3 rounded-full bg-emerald-500"></div>
-          <div className="w-3 h-3 rounded-full bg-zinc-300 dark:bg-zinc-700"></div>
-          <div className="w-3 h-3 rounded-full bg-zinc-300 dark:bg-zinc-700"></div>
+        <div className="flex gap-2">
+          {[0, 1, 2].map((i) => (
+            <motion.div
+              key={i}
+              className="w-2.5 h-2.5 rounded-full bg-emerald-500"
+              initial={{ opacity: 0.3, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1.2 }}
+              transition={{
+                duration: 0.8,
+                repeat: Infinity,
+                repeatType: "reverse",
+                delay: i * 0.2,
+                ease: "easeInOut"
+              }}
+            />
+          ))}
         </div>
       </div>
     </footer>

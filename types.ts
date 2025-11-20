@@ -9,6 +9,7 @@ export interface NavItem {
 export interface PricingTier {
   name: string;
   price: string;
+  originalPrice: string;
   description: string;
   features: string[];
   highlight?: boolean;
@@ -62,6 +63,7 @@ export interface UiTranslation {
     subtitle: string;
     company: string;
     companyLink: string;
+    launchPeriod: string;
   };
   faq: {
     title: string;
