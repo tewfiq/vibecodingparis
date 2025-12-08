@@ -177,7 +177,7 @@ export const FEATURES: Record<'fr' | 'en', Feature[]> = {
 };
 
 export const PARTNERS = [
-  "LVMH", "Station F", "HEC Paris", "Le Wagon", "Kengo", "Ray Ban Meta", "Moon Croissant"
+  "Ray Ban Meta", "Moon Croissant", "7 Boys & Girls", "Wojo", "Le Progrès (75003)", "ECV Paris", "Metaverse College", "Ascencia BS", "CDPI"
 ];
 
 export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
