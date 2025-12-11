@@ -183,7 +183,7 @@ export const PARTNERS = [
 export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
   fr: {
     hero: {
-      badge: "Prochaine Session : Décembre 2025",
+      badge: "Prochaine Session : Janvier 2026",
       title: "Une compétence \nen 2 heures.",
       subtitle: "Apprenez à coder sans coder. De l'idée au site en ligne, en français, avec l'IA comme copilote. Rien de personnel, juste du shipping.",
       ctaPrimary: "Je m'inscris — 149 €",
@@ -253,7 +253,7 @@ export const UI_TEXT: Record<'fr' | 'en', UiTranslation> = {
   },
   en: {
     hero: {
-      badge: "Next Session: December 2025",
+      badge: "Next Session: January 2026",
       title: "One skill \nin 2 hours.",
       subtitle: "Learn to code without coding. From idea to live site, using AI as your copilot. Nothing personal, just shipping.",
       ctaPrimary: "Sign up — €149",
