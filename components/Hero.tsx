@@ -133,7 +133,7 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
                       </div>
                       <div className="bg-emerald-50 dark:bg-emerald-900/20 p-4 rounded-lg border border-emerald-100 dark:border-emerald-800/50 flex items-center gap-3">
                           <Terminal size={20} className="text-emerald-600 dark:text-emerald-400" />
-                          <span className="font-bold text-emerald-800 dark:text-emerald-200">Deployed: https://vibe-coding.app</span>
+                          <span className="font-bold text-emerald-800 dark:text-emerald-200">Deployed: https://vibecodingparis.com</span>
                       </div>
                   </div>
               </div>
