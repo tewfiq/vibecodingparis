@@ -2,6 +2,15 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --animate-scroll-left: scroll-left 30s linear infinite;
+
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

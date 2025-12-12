@@ -60,7 +60,7 @@ const Pricing: React.FC<PricingProps> = ({ language }) => {
               <h3 className="text-lg font-medium text-zinc-500 dark:text-zinc-400 mb-2">{tier.name}</h3>
               
               <div className="flex flex-col mb-1">
-                 <span className="text-zinc-400 dark:text-zinc-500 line-through text-lg font-medium w-fit">
+                 <span className="text-emerald-500 line-through text-lg font-medium w-fit">
                    {tier.originalPrice}
                  </span>
                  <div className="flex items-baseline gap-1">

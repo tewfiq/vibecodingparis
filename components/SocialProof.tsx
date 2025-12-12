@@ -10,7 +10,7 @@ const SocialProof: React.FC = () => {
         <div className="flex w-[200%] animate-scroll-left">
             {[...PARTNERS, ...PARTNERS, ...PARTNERS, ...PARTNERS].map((partner, index) => (
                 <div key={index} className="flex-shrink-0 mx-8 flex items-center justify-center">
-                    <span className="text-xl md:text-2xl font-bold text-zinc-300 dark:text-zinc-700 uppercase tracking-widest hover:text-zinc-800 dark:hover:text-zinc-300 transition-colors cursor-default select-none">
+                    <span className="text-xl md:text-2xl font-bold text-emerald-500 uppercase tracking-widest hover:text-emerald-600 transition-colors cursor-default select-none">
                         {partner}
                     </span>
                 </div>
